@@ -23,7 +23,7 @@ public class PanelProduto extends JPanel {
 	public JButton getBtnVoltar() {
 		if (btnVoltar == null) {
 			btnVoltar = new JButton("Voltar");
-			btnVoltar.setBounds(29, 10, 107, 32);
+			btnVoltar.setBounds(10, 10, 85, 21);
 		}
 		return btnVoltar;
 	}

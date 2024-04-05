@@ -93,6 +93,10 @@ public class PanelHome extends JPanel {
 	public JButton getBtnClientes() {
 		if (btnClientes == null) {
 			btnClientes = new JButton("Clientes");
+			btnClientes.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
 			btnClientes.setBounds(53, 365, 250, 35);
 			btnClientes.setFont(new Font("Tahoma", Font.PLAIN, 22));
 			btnClientes.setBackground(new Color(255, 255, 255));
@@ -101,7 +105,7 @@ public class PanelHome extends JPanel {
 	}
 	public JButton getBtnFinacas() {
 		if (btnFinacas == null) {
-			btnFinacas = new JButton("Fina\u00E7as");
+			btnFinacas = new JButton("Balanço Completo");
 			btnFinacas.setBounds(53, 489, 250, 35);
 			btnFinacas.setFont(new Font("Tahoma", Font.PLAIN, 22));
 			btnFinacas.setBackground(new Color(255, 255, 255));
@@ -110,7 +114,7 @@ public class PanelHome extends JPanel {
 	}
 	public JButton getBtnEstoque() {
 		if (btnEstoque == null) {
-			btnEstoque = new JButton("Estoque");
+			btnEstoque = new JButton("....");
 			btnEstoque.setBounds(53, 613, 250, 35);
 			btnEstoque.setFont(new Font("Tahoma", Font.PLAIN, 22));
 			btnEstoque.setBackground(new Color(255, 255, 255));

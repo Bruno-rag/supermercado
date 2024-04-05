@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.Frame;
+import view.PanelCadCliente;
 import view.PanelCliente;
 import view.PanelFinaca;
 import view.PanelHome;
@@ -18,6 +19,7 @@ public class ControllerFrame {
 	PanelProduto panelProduto;
 	PanelVendas panelVendas;
 	PanelFinaca panelFinaca;
+	PanelCadCliente panelCadCliente;
 	
 	
 	public ControllerFrame() {
@@ -28,6 +30,7 @@ public class ControllerFrame {
 		panelVendas = new PanelVendas();
 		panelCliente = new PanelCliente();
 		panelFinaca = new PanelFinaca();
+		panelCadCliente = new PanelCadCliente();
 		
 		frame.setContentPane(panelHome);
 		
@@ -48,15 +51,19 @@ public class ControllerFrame {
 			frame.setContentPane(panelCliente);
 			
 		});
+		
+		panelCliente.getBtnCadCliente().addActionListener( (ActionEvent e)->{
+			//System.out.println("click");
+			frame.setContentPane(panelCadCliente);
+			
+		});
+		
 		panelHome.getBtnFinacas().addActionListener( (ActionEvent e)->{
 			//System.out.println("click");
 			frame.setContentPane(panelFinaca);
 		});
-		panelHome.getBtnEstoque().addActionListener( (ActionEvent e)->{
-			System.out.println("click");
-			
-		});
 		
+		////////////////btnVOLTAR///////
 		panelProduto.getBtnVoltar().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelHome);
 		});
@@ -67,11 +74,13 @@ public class ControllerFrame {
 		panelCliente.getBtnVoltar().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelHome);
 		});
+		panelCadCliente.getBtnVoltar().addActionListener((ActionEvent e)->{
+			frame.setContentPane(panelCliente);
+		});
 		
 		panelFinaca.getBtnVoltar().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelHome);
-		});
-		
+		});		
 	}
 	
 }

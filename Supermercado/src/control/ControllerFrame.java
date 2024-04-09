@@ -80,7 +80,9 @@ public class ControllerFrame {
 		
 		panelFinaca.getBtnVoltar().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelHome);
-		});		
+		});	
+		
+		System.out.println("teste");
 	}
 	
 }

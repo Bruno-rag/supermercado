@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -22,8 +23,10 @@ public class PanelFinaca extends JPanel {
 
 	public JButton getBtnVoltar() {
 		if (btnVoltar == null) {
-			btnVoltar = new JButton("Voltar");
-			btnVoltar.setBounds(10, 10, 85, 21);
+			btnVoltar = new JButton("X");
+			btnVoltar.setBackground(new Color(220, 20, 60));
+			btnVoltar.setFont(new Font("Tahoma", Font.BOLD, 18));
+			btnVoltar.setBounds(952, 24, 47, 40);
 		}
 		return btnVoltar;
 	}

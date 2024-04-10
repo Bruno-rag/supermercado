@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import view.Frame;
 import view.PanelCadCliente;
+import view.PanelCadastroProduto;
+import view.PanelCadastroVenda;
 import view.PanelCliente;
 import view.PanelFinaca;
 import view.PanelHome;
@@ -20,6 +22,8 @@ public class ControllerFrame {
 	PanelVendas panelVendas;
 	PanelFinaca panelFinaca;
 	PanelCadCliente panelCadCliente;
+	PanelCadastroProduto panelCadastroProduto;
+	PanelCadastroVenda panelCadastroVenda;
 	
 	
 	public ControllerFrame() {
@@ -31,6 +35,8 @@ public class ControllerFrame {
 		panelCliente = new PanelCliente();
 		panelFinaca = new PanelFinaca();
 		panelCadCliente = new PanelCadCliente();
+		panelCadastroProduto = new PanelCadastroProduto();
+		panelCadastroVenda = new PanelCadastroVenda();
 		
 		frame.setContentPane(panelHome);
 		
@@ -82,7 +88,20 @@ public class ControllerFrame {
 			frame.setContentPane(panelHome);
 		});	
 		
-		System.out.println("teste");
+		panelProduto.getBtnAdicionarProduto().addActionListener((ActionEvent e)->{
+			frame.setContentPane(panelCadastroProduto);
+		});	
+		
+		panelCadastroProduto.getBtnVoltar().addActionListener((ActionEvent e)->{
+			frame.setContentPane(panelProduto);
+		});
+		
+		panelVendas.getBtnCadastroVenda().addActionListener((ActionEvent e)->{
+			frame.setContentPane(panelCadastroVenda);
+		});
+		panelCadastroVenda.getBtnVoltar().addActionListener((ActionEvent e)->{
+			frame.setContentPane(panelVendas);
+		});
 	}
 	
 }

@@ -28,8 +28,8 @@ public class PanelHome extends JPanel {
 	private JButton btnVendas;
 	private JButton btnClientes;
 	private JButton btnFinacas;
-	private JButton btnEstoque;
-	public int num = 2;
+	//private JButton btnEstoque;
+	//public int num = 2;
 	
 	ImageIcon imgIcon = new ImageIcon(getClass().getResource("/img/shopping2.jpg"));
 	//Image image =  imgIcon.getImage();
@@ -45,7 +45,7 @@ public class PanelHome extends JPanel {
 		add(getBtnVendas());
 		add(getBtnClientes());
 		add(getBtnFinacas());
-		add(getBtnEstoque());
+		//add(getBtnEstoque());
 		add(getPanel());
 		add(getLabelTela(), BorderLayout.CENTER);
 	}
@@ -105,14 +105,14 @@ public class PanelHome extends JPanel {
 	}
 	public JButton getBtnFinacas() {
 		if (btnFinacas == null) {
-			btnFinacas = new JButton("BalanÃ§o Completo");
+			btnFinacas = new JButton("Balanço Completo");
 			btnFinacas.setBounds(53, 489, 250, 35);
 			btnFinacas.setFont(new Font("Tahoma", Font.PLAIN, 22));
 			btnFinacas.setBackground(new Color(255, 255, 255));
 		}
 		return btnFinacas;
 	}
-	public JButton getBtnEstoque() {
+	/*public JButton getBtnEstoque() {
 		if (btnEstoque == null) {
 			btnEstoque = new JButton("....");
 			btnEstoque.setBounds(53, 613, 250, 35);
@@ -120,7 +120,7 @@ public class PanelHome extends JPanel {
 			btnEstoque.setBackground(new Color(255, 255, 255));
 		}
 		return btnEstoque;
-	}
+	}*/
 	public JLabel getLabelTela() {
 		if(labelTela == null) {
 			labelTela = new JLabel();

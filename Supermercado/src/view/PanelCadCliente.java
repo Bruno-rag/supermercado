@@ -6,8 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 
 public class PanelCadCliente extends JPanel {
@@ -25,11 +24,12 @@ public class PanelCadCliente extends JPanel {
 	private JTextField textFieldRG;
 	private JTextField textFieldDataN;
 	private JTextField textFieldLimiteCred;
+	private JLabel lblCadastroDeCliente;
 
 	
 	public PanelCadCliente() {
 		//this.setVisible(false);
-		this.setBackground(new Color(57, 148, 28));
+		this.setBackground(new Color(25, 25, 25));
 		this.setSize(1024, 768);
 		setLayout(null);
 		add(getLblNome());
@@ -44,72 +44,79 @@ public class PanelCadCliente extends JPanel {
 		add(getTextFieldRG());
 		add(getTextFieldDataN());
 		add(getTextFieldLimiteCred());
+		add(getLblCadastroDeCliente());
 	}
 	
 	
 	private JLabel getLblNome() {
 		if (lblNome == null) {
 			lblNome = new JLabel("Nome:");
-			lblNome.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblNome.setBounds(188, 179, 55, 45);
+			lblNome.setForeground(new Color(255, 255, 255));
+			lblNome.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblNome.setBounds(344, 145, 55, 45);
 		}
 		return lblNome;
 	}
 	private JLabel getLblCPF() {
 		if (lblCPF == null) {
 			lblCPF = new JLabel("CPF:");
-			lblCPF.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblCPF.setBounds(188, 234, 55, 45);
+			lblCPF.setForeground(new Color(255, 255, 255));
+			lblCPF.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblCPF.setBounds(344, 226, 55, 45);
 		}
 		return lblCPF;
 	}
 	private JLabel getLblRG() {
 		if (lblRG == null) {
 			lblRG = new JLabel("RG:");
-			lblRG.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblRG.setBounds(188, 289, 55, 45);
+			lblRG.setForeground(new Color(255, 255, 255));
+			lblRG.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblRG.setBounds(344, 306, 55, 45);
 		}
 		return lblRG;
 	}
 	private JLabel getLblDataN() {
 		if (lblDataN == null) {
 			lblDataN = new JLabel("Data de nascimento:");
-			lblDataN.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblDataN.setBounds(188, 344, 155, 45);
+			lblDataN.setForeground(new Color(255, 255, 255));
+			lblDataN.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblDataN.setBounds(344, 381, 183, 45);
 		}
 		return lblDataN;
 	}
 	private JLabel getLblLimiteCred() {
 		if (lblLimiteCred == null) {
-			lblLimiteCred = new JLabel("Limite de crédito:");
-			lblLimiteCred.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblLimiteCred.setBounds(188, 399, 136, 45);
+			lblLimiteCred = new JLabel("Limite de credito:");
+			lblLimiteCred.setForeground(new Color(255, 255, 255));
+			lblLimiteCred.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblLimiteCred.setBounds(344, 459, 155, 45);
 		}
 		return lblLimiteCred;
 	}
 	private JButton getBtnCadastrar() {
 		if (btnCadastrar == null) {
 			btnCadastrar = new JButton("Cadastrar");
+			btnCadastrar.setBackground(new Color(87, 161, 115));
 			btnCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			btnCadastrar.setBounds(410, 479, 109, 45);
+			btnCadastrar.setBounds(380, 647, 264, 35);
 		}
 		return btnCadastrar;
 	}
 	public JButton getBtnVoltar() {
 		if (btnVoltar == null) {
-			btnVoltar = new JButton("Voltar");
-			btnVoltar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			btnVoltar.setBounds(10, 10, 85, 21);
+			btnVoltar = new JButton("X");
+			btnVoltar.setForeground(new Color(255, 255, 255));
+			btnVoltar.setBackground(new Color(220, 20, 60));
+			btnVoltar.setFont(new Font("Tahoma", Font.BOLD, 18));
+			btnVoltar.setBounds(952, 24, 47, 40);
+			
 		}
 		return btnVoltar;
 	}
 	private JTextField getTextFieldNome() {
 		if (textFieldNome == null) {
 			textFieldNome = new JTextField();
-			textFieldNome.setBounds(253, 194, 233, 19);
+			textFieldNome.setBounds(344, 186, 336, 30);
 			textFieldNome.setColumns(10);
 		}
 		return textFieldNome;
@@ -118,7 +125,7 @@ public class PanelCadCliente extends JPanel {
 		if (textFieldCPF == null) {
 			textFieldCPF = new JTextField();
 			textFieldCPF.setColumns(10);
-			textFieldCPF.setBounds(253, 249, 144, 19);
+			textFieldCPF.setBounds(344, 266, 336, 30);
 		}
 		return textFieldCPF;
 	}
@@ -126,7 +133,7 @@ public class PanelCadCliente extends JPanel {
 		if (textFieldRG == null) {
 			textFieldRG = new JTextField();
 			textFieldRG.setColumns(10);
-			textFieldRG.setBounds(253, 304, 144, 19);
+			textFieldRG.setBounds(344, 341, 336, 30);
 		}
 		return textFieldRG;
 	}
@@ -134,7 +141,7 @@ public class PanelCadCliente extends JPanel {
 		if (textFieldDataN == null) {
 			textFieldDataN = new JTextField();
 			textFieldDataN.setColumns(10);
-			textFieldDataN.setBounds(353, 359, 96, 19);
+			textFieldDataN.setBounds(344, 419, 336, 30);
 		}
 		return textFieldDataN;
 	}
@@ -142,8 +149,17 @@ public class PanelCadCliente extends JPanel {
 		if (textFieldLimiteCred == null) {
 			textFieldLimiteCred = new JTextField();
 			textFieldLimiteCred.setColumns(10);
-			textFieldLimiteCred.setBounds(334, 414, 96, 19);
+			textFieldLimiteCred.setBounds(344, 494, 336, 30);
 		}
 		return textFieldLimiteCred;
+	}
+	private JLabel getLblCadastroDeCliente() {
+		if (lblCadastroDeCliente == null) {
+			lblCadastroDeCliente = new JLabel("CADASTRO DE CLIENTE");
+			lblCadastroDeCliente.setForeground(Color.WHITE);
+			lblCadastroDeCliente.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblCadastroDeCliente.setBounds(412, 41, 200, 45);
+		}
+		return lblCadastroDeCliente;
 	}
 }

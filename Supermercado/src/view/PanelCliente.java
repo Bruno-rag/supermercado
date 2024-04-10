@@ -19,55 +19,52 @@ public class PanelCliente extends JPanel {
 
 	
 	public PanelCliente() {
-		this.setBackground(new Color(57, 148, 28));
+		this.setBackground(new Color(25, 25, 25));
 		this.setSize(1024, 768);
 		setLayout(null);
 		add(getBtnVoltar());
 		add(getBtnCadCliente());
 		add(getBtnRmvCliente());
-		add(getLblTituloApagar());
+		add(getLblTitulo());
 	}
 	
 	public JButton getBtnCadCliente() {
 		if (btnCadCliente == null) {
 			btnCadCliente = new JButton("Cadastrar Cliente");
+			btnCadCliente.setBackground(new Color(255, 255, 255));
 			btnCadCliente.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			btnCadCliente.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			btnCadCliente.setBounds(267, 566, 250, 35);
+			btnCadCliente.setBounds(364, 265, 295, 91);
 		}
 		return btnCadCliente;
 	}
 	
 	public JButton getBtnVoltar() {
 		if (btnVoltar == null) {
-			btnVoltar = new JButton("Voltar");
-			btnVoltar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			btnVoltar.setBounds(10, 10, 85, 21);
+			btnVoltar = new JButton("X");
+			btnVoltar.setBackground(new Color(220, 20, 60));
+			btnVoltar.setFont(new Font("Tahoma", Font.BOLD, 18));
+			btnVoltar.setBounds(952, 24, 47, 40);
 		}
 		return btnVoltar;
 	}
 	
-	private JButton getBtnRmvCliente() {
+	public JButton getBtnRmvCliente() {
 		if (btnRmvCliente == null) {
 			btnRmvCliente = new JButton("Remover Cliente");
+			btnRmvCliente.setBackground(new Color(255, 255, 255));
 			btnRmvCliente.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			btnRmvCliente.setBounds(576, 566, 250, 35);
+			btnRmvCliente.setBounds(364, 440, 295, 91);
 		}
 		return btnRmvCliente;
 	}
 	
 	//apagar essa label depois, serve para representar a lista
-	private JLabel getLblTituloApagar() {
+	public JLabel getLblTitulo() {
 		if (lblTituloApagar == null) {
-			lblTituloApagar = new JLabel("*Lista de Clientes*");
-			lblTituloApagar.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			lblTituloApagar.setBounds(405, 214, 214, 92);
+			lblTituloApagar = new JLabel("LISTA DE CLIENTE");
+			lblTituloApagar.setForeground(new Color(255, 255, 255));
+			lblTituloApagar.setFont(new Font("Tahoma", Font.BOLD, 24));
+			lblTituloApagar.setBounds(397, 108, 229, 91);
 		}
 		return lblTituloApagar;
 	}

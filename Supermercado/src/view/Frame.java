@@ -16,15 +16,7 @@ public class Frame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds(30, 50, 1024, 768);
 		this.setResizable(false);
-		//getContentPane().add(getPanel(), BorderLayout.CENTER);
-		
+		this.validate();
 	}
 
-	private JPanel getPanel() {
-		if (panel == null) {
-			panel = new JPanel();
-			panel.setBackground(new Color(40, 40, 40));
-		}
-		return panel;
-	}
 }

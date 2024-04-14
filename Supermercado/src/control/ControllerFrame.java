@@ -24,7 +24,7 @@ public class ControllerFrame {
 	PanelCadCliente panelCadCliente;
 	PanelCadastroProduto panelCadastroProduto;
 	PanelCadastroVenda panelCadastroVenda;
-	
+	ControllerPanelProduto controllerPanelProduto;
 	
 	public ControllerFrame() {
 		
@@ -37,15 +37,10 @@ public class ControllerFrame {
 		panelCadCliente = new PanelCadCliente();
 		panelCadastroProduto = new PanelCadastroProduto();
 		panelCadastroVenda = new PanelCadastroVenda();
+		controllerPanelProduto = new ControllerPanelProduto(frame,panelHome,panelProduto);
+		
 		
 		frame.setContentPane(panelHome);
-		
-		panelHome.getBtnProduto().addActionListener( (ActionEvent e)->{
-			//System.out.println("click");
-			frame.setContentPane(panelProduto);
-			//panelProduto.setVisible(true);
-			
-		});
 		
 		panelHome.getBtnVendas().addActionListener( (ActionEvent e)->{
 			//System.out.println("click");
@@ -70,9 +65,7 @@ public class ControllerFrame {
 		});
 		
 		////////////////btnVOLTAR///////
-		panelProduto.getBtnVoltar().addActionListener((ActionEvent e)->{
-			frame.setContentPane(panelHome);
-		});
+		
 		panelVendas.getBtnVoltar().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelHome);
 		});
@@ -88,13 +81,6 @@ public class ControllerFrame {
 			frame.setContentPane(panelHome);
 		});	
 		
-		panelProduto.getBtnAdicionarProduto().addActionListener((ActionEvent e)->{
-			frame.setContentPane(panelCadastroProduto);
-		});	
-		
-		panelCadastroProduto.getBtnVoltar().addActionListener((ActionEvent e)->{
-			frame.setContentPane(panelProduto);
-		});
 		
 		panelVendas.getBtnCadastroVenda().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelCadastroVenda);

@@ -123,16 +123,16 @@ public class PanelCadastroProduto extends JPanel {
 			lblPrecoCompra = new JLabel("Pre\u00E7o de Compra:");
 			lblPrecoCompra.setForeground(Color.WHITE);
 			lblPrecoCompra.setFont(new Font("Tahoma", Font.BOLD, 16));
-			lblPrecoCompra.setBounds(270, 304, 155, 23);
+			lblPrecoCompra.setBounds(539, 304, 155, 23);
 		}
 		return lblPrecoCompra;
 	}
 	public JLabel getLblPrecoVenda() {
 		if (lblPrecoVenda == null) {
-			lblPrecoVenda = new JLabel("Pre\u00E7o de Compra:");
+			lblPrecoVenda = new JLabel("Pre\u00E7o de Venda:");
 			lblPrecoVenda.setForeground(Color.WHITE);
 			lblPrecoVenda.setFont(new Font("Tahoma", Font.BOLD, 16));
-			lblPrecoVenda.setBounds(539, 304, 155, 23);
+			lblPrecoVenda.setBounds(270, 304, 155, 23);
 		}
 		return lblPrecoVenda;
 	}

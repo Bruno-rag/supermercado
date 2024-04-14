@@ -5,22 +5,30 @@ import java.awt.Font;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class PanelFinaca extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private JButton btnVoltar;
+	private JButton btnCheque;
+	private JButton btnRedimento;
+	private JLabel labelFinaca;
 
-	/**
-	 * Create the panel.
-	 */
+	
 	public PanelFinaca() {
-		this.setBackground(new Color(150, 120, 10));
+		//this.setVisible(false);
+		this.setBackground(new Color(25, 25, 25));
+		//this.setBounds(342, 0, 682, 768);
 		this.setSize(1024, 768);
 		setLayout(null);
 		add(getBtnVoltar());
+		add(getBtnCheque());
+		add(getBtnRedimento());
+		add(getLabelFinaca());
 	}
-
 	public JButton getBtnVoltar() {
 		if (btnVoltar == null) {
 			btnVoltar = new JButton("X");
@@ -29,5 +37,32 @@ public class PanelFinaca extends JPanel {
 			btnVoltar.setBounds(952, 24, 47, 40);
 		}
 		return btnVoltar;
+	}
+	public JButton getBtnCheque() {
+		if (btnCheque == null) {
+			btnCheque = new JButton("Contar-Cheque");
+			btnCheque.setBackground(new Color(255, 255, 255));
+			btnCheque.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			btnCheque.setBounds(364, 441, 295, 91);
+		}
+		return btnCheque;
+	}
+	public JButton getBtnRedimento() {
+		if (btnRedimento == null) {
+			btnRedimento = new JButton("Rendimento");
+			btnRedimento.setBackground(new Color(255, 255, 255));
+			btnRedimento.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			btnRedimento.setBounds(364, 265, 295, 91);
+		}
+		return btnRedimento;
+	}
+	public JLabel getLabelFinaca() {
+		if (labelFinaca == null) {
+			labelFinaca = new JLabel("FINANÇA");
+			labelFinaca.setForeground(new Color(255, 255, 255));
+			labelFinaca.setFont(new Font("Tahoma", Font.BOLD, 24));
+			labelFinaca.setBounds(451, 24, 121, 91);
+		}
+		return labelFinaca;
 	}
 }

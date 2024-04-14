@@ -77,6 +77,12 @@ public class ControllerPanelProduto {
 			}
 			//System.out.println(panelCadastroProduto.getTextFieldNome().getText());
 			panelCadastroProduto.getTextFieldNome().setText("");
+			panelCadastroProduto.getTextFieldTipo().setText("");
+			panelCadastroProduto.getTextFieldPrecoVenda().setText("");
+			panelCadastroProduto.getTextFieldPrecoCompra().setText("");
+			panelCadastroProduto.getTextFieldFabricacao().setText("");
+			panelCadastroProduto.getTextFieldValidade().setText("");
+			panelCadastroProduto.getTextFieldQuatidadeEstoque().setText("");
 		});
 	}
 

@@ -20,7 +20,7 @@ import javax.swing.JScrollPane;
 
 
 
-//import javax.swing.BorderFactory;
+import javax.swing.BorderFactory;
 
 import java.util.ArrayList;
 import javax.swing.ScrollPaneConstants;
@@ -108,28 +108,33 @@ public class PanelListaProduto extends JPanel {
 		if (panelContainer == null) {
 			panelContainer = new JPanel();
 			panelContainer.setBackground(new Color(50, 50, 50));
-			panelContainer.setLayout(new GridLayout(0, 1));
+			panelContainer.setLayout(new GridLayout(40, 1));
 			
 			
 			for (Produto produto : this.produtos) {
-					
+				Border borderLinhas = (Border) new LineBorder(Color.GRAY, 2);
+				Border bordaColunas = (Border) new LineBorder(Color.black, 1);	
+				
 				txtpnNome = new JTextPane();
 				txtpnNome.setEditable(false);
 				txtpnNome.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnNome.setText(produto.getNome());
 				txtpnNome.setBounds(10, 10, 379, 50);
+				txtpnNome.setBorder(bordaColunas);
 				
-				  txtpnTipo = new JTextPane();
+				txtpnTipo = new JTextPane();
 				txtpnTipo.setEditable(false);
 				txtpnTipo.setText(produto.getTipo());
 				txtpnTipo.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnTipo.setBounds(413, 10, 379, 50);
+				txtpnTipo.setBorder(bordaColunas);
 				
 				txtpnValidade = new JTextPane();
 				txtpnValidade.setEditable(false);
 				txtpnValidade.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnValidade.setText(produto.getVal());
 				txtpnValidade.setBounds(10, 70, 379, 50);
+				txtpnValidade.setBorder(bordaColunas);
 				
 				
 				txtpnFabricacao = new JTextPane();
@@ -137,31 +142,34 @@ public class PanelListaProduto extends JPanel {
 				txtpnFabricacao.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnFabricacao.setText(produto.getFab());
 				txtpnFabricacao.setBounds(413, 70, 379, 50);
-			  
+				txtpnFabricacao.setBorder(bordaColunas);
+				
 				txtpnCompra = new JTextPane();
 				txtpnCompra.setEditable(false);
 				txtpnCompra.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnCompra.setText(produto.getPrecoCompra());
 				txtpnCompra.setBounds(10, 130, 379, 50);
+				txtpnCompra.setBorder(bordaColunas);
 				
 				txtpnVenda = new JTextPane();
 				txtpnVenda.setEditable(false);
 				txtpnVenda.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnVenda.setText(produto.getPrecoVenda());
 				txtpnVenda.setBounds(413, 130, 379, 50);
+				txtpnVenda.setBorder(bordaColunas);
 				
 				txtpnQtd = new JTextPane();
 				txtpnQtd.setEditable(false);
 				txtpnQtd.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				txtpnQtd.setText(produto.getQuantidade());
 				txtpnQtd.setBounds(413, 130, 379, 50);
+				txtpnQtd.setBorder(bordaColunas);
 				
 				
-				//Border border = (Border) new LineBorder(Color.RED, 3);
 				
 				linha = new JPanel();
 				linha.setSize(890, 200);
-				//linha.setBorder(border);
+				linha.setBorder(borderLinhas);
 				linha.setBackground(new Color(105, 105, 105));
 				linha.setLayout(new GridLayout(1, 0));
 				

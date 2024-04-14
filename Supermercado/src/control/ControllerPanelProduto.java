@@ -99,6 +99,9 @@ public class ControllerPanelProduto {
 		panelCadastroProduto.getBtnVoltar().addActionListener((ActionEvent e)->{
 			frame.setContentPane(panelProduto);
 		});
+		panelListaProduto.getBtnVoltar().addActionListener((ActionEvent e)->{
+			frame.setContentPane(panelProduto);
+		});
 		
 		panelProduto.getBtnEstoque().addActionListener((ActionEvent e)->{
 			

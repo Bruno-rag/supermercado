@@ -112,8 +112,8 @@ public class PanelListaProduto extends JPanel {
 			
 			
 			for (Produto produto : this.produtos) {
-				Border borderLinhas = (Border) new LineBorder(Color.GRAY, 2);
-				Border bordaColunas = (Border) new LineBorder(Color.black, 1);	
+				Border borderLinhas = (Border) new LineBorder(new Color(100, 100, 100), 1);
+				Border bordaColunas = (Border) new LineBorder(new Color(200, 200, 200), 1);	
 				
 				txtpnNome = new JTextPane();
 				txtpnNome.setEditable(false);
@@ -172,6 +172,7 @@ public class PanelListaProduto extends JPanel {
 				linha.setBorder(borderLinhas);
 				linha.setBackground(new Color(105, 105, 105));
 				linha.setLayout(new GridLayout(1, 0));
+				linha.setPreferredSize(new Dimension(200, 100));
 				
 				linha.add(txtpnNome);
 				linha.add(txtpnTipo);

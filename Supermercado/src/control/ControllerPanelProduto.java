@@ -83,6 +83,9 @@ public class ControllerPanelProduto {
 			panelCadastroProduto.getTextFieldFabricacao().setText("");
 			panelCadastroProduto.getTextFieldValidade().setText("");
 			panelCadastroProduto.getTextFieldQuatidadeEstoque().setText("");
+			//atualiza a lista
+			panelListaProduto.getScrollPane().setViewportView(panelListaProduto.getPanelContainer(lerProdutos()));
+			
 		});
 	}
 
@@ -139,8 +142,7 @@ public class ControllerPanelProduto {
 				
 			}
 	    }
-		return produtos;
-	    
+		return produtos; 
 	}
 	
 	

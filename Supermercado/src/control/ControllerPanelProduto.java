@@ -42,8 +42,8 @@ public class ControllerPanelProduto {
 		
 		panelCadastroProduto.getBtnSalvar().addActionListener((ActionEvent e)->{	
 			try {
-				//cria um diretório chamando novo
-				File diretorio = new File("c:\\novo");
+				//cria um diretï¿½rio chamando novo
+				File diretorio = new File("c:\\Registros");
 				diretorio.mkdir();
 				
 				//cria um aquivo de texto chamando produto
@@ -56,15 +56,15 @@ public class ControllerPanelProduto {
 				FileOutputStream fileStream = new FileOutputStream(arquivo, true);
 				
 				
-				//String texto = "Nome:+this.aluno.getNome()Cpf:this.aluno.getCpf() RG:this.aluno.getRg()Data de nascimento:this.aluno.getDataNascimento()Matrícula:this.aluno.getMatricula()Endereço:this.aluno.getEndereco()Gênero:this.aluno.getSexo()Curso:this.aluno.getCurso()\n";
+				//String texto = "Nome:+this.aluno.getNome()Cpf:this.aluno.getCpf() RG:this.aluno.getRg()Data de nascimento:this.aluno.getDataNascimento()Matrï¿½cula:this.aluno.getMatricula()Endereï¿½o:this.aluno.getEndereco()Gï¿½nero:this.aluno.getSexo()Curso:this.aluno.getCurso()\n";
 				//String texto = "teste\n";
-				String texto = this.panelCadastroProduto.getTextFieldNome().getText()+","+
-									this.panelCadastroProduto.getTextFieldTipo().getText()+","+
-									this.panelCadastroProduto.getTextFieldPrecoVenda().getText()+","+
-									this.panelCadastroProduto.getTextFieldPrecoCompra().getText()+","+
-									this.panelCadastroProduto.getTextFieldFabricacao().getText()+","+
-									this.panelCadastroProduto.getTextFieldValidade().getText()+","+
-									this.panelCadastroProduto.getTextFieldQuatidadeEstoque().getText()+"\n";
+				String texto = "NOME:"+this.panelCadastroProduto.getTextFieldNome().getText()+"\n"+
+								"TIPO:"+this.panelCadastroProduto.getTextFieldTipo().getText()+"\n"+
+								"VENDA:"+this.panelCadastroProduto.getTextFieldPrecoVenda().getText()+"\n"+
+								"COMPRA:"+this.panelCadastroProduto.getTextFieldPrecoCompra().getText()+"\n"+
+								"FAB:"+this.panelCadastroProduto.getTextFieldFabricacao().getText()+"\n"+
+								"VAL:"+this.panelCadastroProduto.getTextFieldValidade().getText()+"\n"+
+								"ESTOQUE:"+this.panelCadastroProduto.getTextFieldQuatidadeEstoque().getText()+"\n\n";
 				
 				System.out.println(texto);
 				fileStream.write(texto.getBytes());

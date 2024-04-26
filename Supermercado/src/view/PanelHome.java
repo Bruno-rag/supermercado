@@ -105,7 +105,7 @@ public class PanelHome extends JPanel {
 	}
 	public JButton getBtnFinacas() {
 		if (btnFinacas == null) {
-			btnFinacas = new JButton("Balanço Completo");
+			btnFinacas = new JButton("BalanÃ§o Completo");
 			btnFinacas.setBounds(53, 489, 250, 35);
 			btnFinacas.setFont(new Font("Tahoma", Font.PLAIN, 22));
 			btnFinacas.setBackground(new Color(255, 255, 255));

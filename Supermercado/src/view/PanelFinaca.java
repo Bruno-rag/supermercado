@@ -40,7 +40,7 @@ public class PanelFinaca extends JPanel {
 	}
 	public JButton getBtnCheque() {
 		if (btnCheque == null) {
-			btnCheque = new JButton("Contar-Cheque");
+			btnCheque = new JButton("Contra-Cheque");
 			btnCheque.setBackground(new Color(255, 255, 255));
 			btnCheque.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			btnCheque.setBounds(364, 441, 295, 91);
@@ -58,7 +58,7 @@ public class PanelFinaca extends JPanel {
 	}
 	public JLabel getLabelFinaca() {
 		if (labelFinaca == null) {
-			labelFinaca = new JLabel("FINANÇA");
+			labelFinaca = new JLabel("FINANÃ‡A");
 			labelFinaca.setForeground(new Color(255, 255, 255));
 			labelFinaca.setFont(new Font("Tahoma", Font.BOLD, 24));
 			labelFinaca.setBounds(451, 24, 121, 91);

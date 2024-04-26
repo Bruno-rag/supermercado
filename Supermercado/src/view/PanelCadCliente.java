@@ -48,7 +48,7 @@ public class PanelCadCliente extends JPanel {
 	}
 	
 	
-	private JLabel getLblNome() {
+	public JLabel getLblNome() {
 		if (lblNome == null) {
 			lblNome = new JLabel("Nome:");
 			lblNome.setForeground(new Color(255, 255, 255));
@@ -57,7 +57,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return lblNome;
 	}
-	private JLabel getLblCPF() {
+	public JLabel getLblCPF() {
 		if (lblCPF == null) {
 			lblCPF = new JLabel("CPF:");
 			lblCPF.setForeground(new Color(255, 255, 255));
@@ -66,7 +66,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return lblCPF;
 	}
-	private JLabel getLblRG() {
+	public JLabel getLblRG() {
 		if (lblRG == null) {
 			lblRG = new JLabel("RG:");
 			lblRG.setForeground(new Color(255, 255, 255));
@@ -75,7 +75,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return lblRG;
 	}
-	private JLabel getLblDataN() {
+	public JLabel getLblDataN() {
 		if (lblDataN == null) {
 			lblDataN = new JLabel("Data de nascimento:");
 			lblDataN.setForeground(new Color(255, 255, 255));
@@ -84,7 +84,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return lblDataN;
 	}
-	private JLabel getLblLimiteCred() {
+	public JLabel getLblLimiteCred() {
 		if (lblLimiteCred == null) {
 			lblLimiteCred = new JLabel("Limite de credito:");
 			lblLimiteCred.setForeground(new Color(255, 255, 255));
@@ -93,7 +93,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return lblLimiteCred;
 	}
-	private JButton getBtnCadastrar() {
+	public JButton getBtnCadastrar() {
 		if (btnCadastrar == null) {
 			btnCadastrar = new JButton("Cadastrar");
 			btnCadastrar.setBackground(new Color(87, 161, 115));
@@ -113,7 +113,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return btnVoltar;
 	}
-	private JTextField getTextFieldNome() {
+	public JTextField getTextFieldNome() {
 		if (textFieldNome == null) {
 			textFieldNome = new JTextField();
 			textFieldNome.setBounds(344, 186, 336, 30);
@@ -121,7 +121,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return textFieldNome;
 	}
-	private JTextField getTextFieldCPF() {
+	public JTextField getTextFieldCPF() {
 		if (textFieldCPF == null) {
 			textFieldCPF = new JTextField();
 			textFieldCPF.setColumns(10);
@@ -129,7 +129,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return textFieldCPF;
 	}
-	private JTextField getTextFieldRG() {
+	public JTextField getTextFieldRG() {
 		if (textFieldRG == null) {
 			textFieldRG = new JTextField();
 			textFieldRG.setColumns(10);
@@ -137,7 +137,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return textFieldRG;
 	}
-	private JTextField getTextFieldDataN() {
+	public JTextField getTextFieldDataN() {
 		if (textFieldDataN == null) {
 			textFieldDataN = new JTextField();
 			textFieldDataN.setColumns(10);
@@ -145,7 +145,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return textFieldDataN;
 	}
-	private JTextField getTextFieldLimiteCred() {
+	public JTextField getTextFieldLimiteCred() {
 		if (textFieldLimiteCred == null) {
 			textFieldLimiteCred = new JTextField();
 			textFieldLimiteCred.setColumns(10);
@@ -153,7 +153,7 @@ public class PanelCadCliente extends JPanel {
 		}
 		return textFieldLimiteCred;
 	}
-	private JLabel getLblCadastroDeCliente() {
+	public JLabel getLblCadastroDeCliente() {
 		if (lblCadastroDeCliente == null) {
 			lblCadastroDeCliente = new JLabel("CADASTRO DE CLIENTE");
 			lblCadastroDeCliente.setForeground(Color.WHITE);

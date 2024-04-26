@@ -17,13 +17,13 @@ public class PanelCadastroVenda extends JPanel {
 	private JLabel lblCliente;
 	private JTextField textFieldNome;
 	private JLabel lblNome;
-	private JTextField textFieldTipo;
+	private JTextField textFieldProduto;
 	private JLabel lblProduto;
-	private JTextField textFieldPrecoVenda;
+	private JTextField textFieldQuatidade;
 	private JLabel lblQuantidade;
 	private JLabel lblPrecoVenda;
 	private JButton btnSalvar;
-	private JComboBox<?> comboBox;
+	private JTextField textFieldFormaPagamento;
 
 	/**
 	 * Create the panel.
@@ -37,13 +37,14 @@ public class PanelCadastroVenda extends JPanel {
 		add(getLblCliente());
 		add(getTextFieldNome());
 		add(getLblNome());
-		add(getTextFieldTipo());
+		add(getTextFieldProduto());
 		add(getLblProduto());
-		add(getTextFieldPrecoVenda());
+		add(getTextFieldQuatidade());
 		add(getLblQuantidade());
 		add(getLblPrecoVenda());
 		add(getBtnSalvar());
-		add(getComboBox());
+		add(getTextFieldFormaPagamento());
+		
 
 	}
 
@@ -58,10 +59,10 @@ public class PanelCadastroVenda extends JPanel {
 	}
 	public JLabel getLblCliente() {
 		if (lblCliente == null) {
-			lblCliente = new JLabel("NOVO CLIENTE:");
+			lblCliente = new JLabel("Cadastro de venda:");
 			lblCliente.setFont(new Font("Tahoma", Font.BOLD, 24));
 			lblCliente.setForeground(new Color(255, 255, 255));
-			lblCliente.setBounds(410, 41, 204, 23);
+			lblCliente.setBounds(394, 41, 235, 23);
 		}
 		return lblCliente;
 	}
@@ -82,13 +83,13 @@ public class PanelCadastroVenda extends JPanel {
 		}
 		return lblNome;
 	}
-	public JTextField getTextFieldTipo() {
-		if (textFieldTipo == null) {
-			textFieldTipo = new JTextField();
-			textFieldTipo.setColumns(10);
-			textFieldTipo.setBounds(270, 314, 483, 40);
+	public JTextField getTextFieldProduto() {
+		if (textFieldProduto == null) {
+			textFieldProduto = new JTextField();
+			textFieldProduto.setColumns(10);
+			textFieldProduto.setBounds(270, 314, 483, 40);
 		}
-		return textFieldTipo;
+		return textFieldProduto;
 	}
 	public JLabel getLblProduto() {
 		if (lblProduto == null) {
@@ -99,13 +100,13 @@ public class PanelCadastroVenda extends JPanel {
 		}
 		return lblProduto;
 	}
-	public JTextField getTextFieldPrecoVenda() {
-		if (textFieldPrecoVenda == null) {
-			textFieldPrecoVenda = new JTextField();
-			textFieldPrecoVenda.setColumns(10);
-			textFieldPrecoVenda.setBounds(271, 397, 214, 40);
+	public JTextField getTextFieldQuatidade() {
+		if (textFieldQuatidade == null) {
+			textFieldQuatidade = new JTextField();
+			textFieldQuatidade.setColumns(10);
+			textFieldQuatidade.setBounds(271, 397, 214, 40);
 		}
-		return textFieldPrecoVenda;
+		return textFieldQuatidade;
 	}
 	public JLabel getLblQuantidade() {
 		if (lblQuantidade == null) {
@@ -133,11 +134,12 @@ public class PanelCadastroVenda extends JPanel {
 		}
 		return btnSalvar;
 	}
-	public JComboBox getComboBox() {
-		if (comboBox == null) {
-			comboBox = new JComboBox();
-			comboBox.setBounds(540, 397, 214, 40);
+	public JTextField getTextFieldFormaPagamento() {
+		if (textFieldFormaPagamento == null) {
+			textFieldFormaPagamento = new JTextField();
+			//textFieldFormaPagamento.setColumns(10);
+			textFieldFormaPagamento.setBounds(539, 397, 214, 40);
 		}
-		return comboBox;
+		return textFieldFormaPagamento;
 	}
 }

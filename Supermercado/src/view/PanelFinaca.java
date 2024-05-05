@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class PanelFinaca extends JPanel {
 
@@ -25,7 +26,6 @@ public class PanelFinaca extends JPanel {
 		this.setSize(1024, 768);
 		setLayout(null);
 		add(getBtnVoltar());
-		add(getBtnCheque());
 		add(getBtnRedimento());
 		add(getLabelFinaca());
 	}
@@ -37,15 +37,6 @@ public class PanelFinaca extends JPanel {
 			btnVoltar.setBounds(952, 24, 47, 40);
 		}
 		return btnVoltar;
-	}
-	public JButton getBtnCheque() {
-		if (btnCheque == null) {
-			btnCheque = new JButton("Contra-Cheque");
-			btnCheque.setBackground(new Color(255, 255, 255));
-			btnCheque.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			btnCheque.setBounds(364, 441, 295, 91);
-		}
-		return btnCheque;
 	}
 	public JButton getBtnRedimento() {
 		if (btnRedimento == null) {

@@ -3,6 +3,9 @@ package view;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import control.ControllerFrame;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 
@@ -18,5 +21,11 @@ public class Frame extends JFrame {
 		this.setResizable(false);
 		this.validate();
 	}
+
+    public void showMessageDialog(ControllerFrame controllerFrame, String string, String string2,
+            int informationMessage) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'showMessageDialog'");
+    }
 
 }

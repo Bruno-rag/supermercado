@@ -3,10 +3,6 @@ package control;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.AbstractButton;
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-
 import view.Frame;
 import view.PanelCadCliente;
 import view.PanelCadastroProduto;
@@ -31,9 +27,7 @@ public class ControllerFrame {
 	ControllerPanelProduto controllerPanelProduto;
 	ControllerPanelCliente controllerPanelCliente;
 	ControllerPanelVenda controllerPanelVenda;
-
-	public JButton btnFinacas;
-
+	
 	public ControllerFrame() {
 		
 		frame = new Frame();
@@ -63,13 +57,7 @@ public class ControllerFrame {
 		
 		panelHome.getBtnFinacas().addActionListener( (ActionEvent e)->{
 			//System.out.println("click");
-			//frame.setContentPane(panelFinaca);
-			btnFinacas.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					btnFinacas.showMessageDialog("Mensagem de Exemplo", "Título da Mensagem", JOptionPane.INFORMATION_MESSAGE);
-				}
-			});
+			frame.setContentPane(panelFinaca);
 		});
 		
 		////////////////btnVOLTAR///////

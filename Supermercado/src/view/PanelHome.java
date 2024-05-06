@@ -66,7 +66,7 @@ public class PanelHome extends JPanel {
 	public JLabel getLabelTitulo() {
 		if (labelTitulo == null) {
 			labelTitulo = new JLabel("Menu");
-			labelTitulo.setBounds(53, 50, 55, 25);
+			labelTitulo.setBounds(53, 50, 56, 25);
 			labelTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
 		}
 		return labelTitulo;

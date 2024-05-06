@@ -8,6 +8,9 @@ public class Produto {
 	String precoVenda;
 	String precoCompra;
 	String quantidade;
+	public int somaCompra = 0;
+	public int somaVenda = 0;
+	public int rend = 0;
 	
 	public Produto(String nome, String tipo, String fab, String val, String precoVenda, String precoCompra,String quantidade) {
 		super();
@@ -69,6 +72,9 @@ public class Produto {
 			this.precoVenda = "";
 		}
 		return precoVenda;
+		
+		//int precoVendaInt = Integer.parseInt(precoVenda);
+		//somaVenda = somaVenda + precoVendaInt;
 	}
 
 	public void setPrecoVenda(String precoVenda) {
@@ -80,6 +86,9 @@ public class Produto {
 			this.precoCompra = "";
 		}
 		return precoCompra;
+		
+		//int precoCompraInt = Integer.parseInt(precoCompra);
+		//somaCompra = somaCompra + precoCompraInt;
 	}
 
 	public void setPrecoCompra(String precoCompra) {

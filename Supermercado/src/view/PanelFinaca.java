@@ -1,4 +1,5 @@
 package view;
+import model.Produto;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -9,13 +10,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class PanelFinaca extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private JButton btnVoltar;
 	private JButton btnCheque;
-	private JButton btnRedimento;
 	private JLabel labelFinaca;
 
 	
@@ -26,8 +27,12 @@ public class PanelFinaca extends JPanel {
 		this.setSize(1024, 768);
 		setLayout(null);
 		add(getBtnVoltar());
-		add(getBtnRedimento());
 		add(getLabelFinaca());
+		
+		JLabel lblNewLabel = new JLabel("Balanço: ");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBounds(342, 109, 113, 14);
+		add(lblNewLabel);
 	}
 	public JButton getBtnVoltar() {
 		if (btnVoltar == null) {
@@ -38,21 +43,14 @@ public class PanelFinaca extends JPanel {
 		}
 		return btnVoltar;
 	}
-	public JButton getBtnRedimento() {
-		if (btnRedimento == null) {
-			btnRedimento = new JButton("Rendimento");
-			btnRedimento.setBackground(new Color(255, 255, 255));
-			btnRedimento.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			btnRedimento.setBounds(364, 265, 295, 91);
-		}
-		return btnRedimento;
-	}
 	public JLabel getLabelFinaca() {
 		if (labelFinaca == null) {
-			labelFinaca = new JLabel("FINANÇA");
+			labelFinaca = new JLabel("RENDIMENTO");
 			labelFinaca.setForeground(new Color(255, 255, 255));
 			labelFinaca.setFont(new Font("Tahoma", Font.BOLD, 24));
-			labelFinaca.setBounds(451, 24, 121, 91);
+			labelFinaca.setBounds(398, 24, 201, 91);
+			//int rend = somaVenda - somaCompra;
+			//labelFinaca = new JLabel(rend);
 		}
 		return labelFinaca;
 	}

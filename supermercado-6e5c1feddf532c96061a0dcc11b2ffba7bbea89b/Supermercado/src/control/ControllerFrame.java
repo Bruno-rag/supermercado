@@ -1,8 +1,16 @@
 package control;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Iterator;
 
+import javax.swing.JOptionPane;
+
+import org.mariadb.jdbc.Connection;
+
+import model.Cliente;
+import model.ClienteDAO;
+import model.DAO;
 import view.Frame;
 import view.PanelCadCliente;
 import view.PanelCadastroProduto;
@@ -28,6 +36,12 @@ public class ControllerFrame {
 	ControllerPanelCliente controllerPanelCliente;
 	ControllerPanelVenda controllerPanelVenda;
 	ControllerPanelFinaca controllerPanelFinaca;
+	
+	DAO dao = new DAO();
+	ClienteDAO clienteDao = new ClienteDAO();	
+	private Connection con;
+	
+	ArrayList<Cliente> clientes;
 	
 	public ControllerFrame() {
 		
@@ -55,7 +69,27 @@ public class ControllerFrame {
 			frame.setContentPane(panelCliente);
 			
 		});
+		//status();
+		
+		//clientes = ClienteDAO.select();
+		//JOptionPane.showMessageDialog(null, "test1");
 		
 	}
+	
+	private void status() {
+		try {
+			con = (Connection) dao.conectar();
+			if (con == null) {
+				JOptionPane.showMessageDialog(null, "Erro de Coneção");
+			} else {
+				JOptionPane.showMessageDialog(null, "Banco de dados conectao");
+			}
+			con.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	
 	
 }

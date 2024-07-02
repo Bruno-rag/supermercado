@@ -50,7 +50,7 @@ public class PanelCliente extends JPanel {
 	
 	public JButton getBtnRmvCliente() {
 		if (btnRmvCliente == null) {
-			btnRmvCliente = new JButton("Remover Cliente");
+			btnRmvCliente = new JButton("Lista Clientes");
 			btnRmvCliente.setBackground(new Color(255, 255, 255));
 			btnRmvCliente.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			btnRmvCliente.setBounds(364, 440, 295, 91);

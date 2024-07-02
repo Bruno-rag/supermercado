@@ -76,7 +76,7 @@ public class PanelFinaca extends JPanel {
 			lblLucroBruto = new JLabel("LUCRO BRUTO:");
 			lblLucroBruto.setForeground(Color.WHITE);
 			lblLucroBruto.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblLucroBruto.setBounds(100, 254, 111, 13);
+			lblLucroBruto.setBounds(100, 254, 224, 13);
 		}
 		return lblLucroBruto;
 	}
@@ -85,7 +85,7 @@ public class PanelFinaca extends JPanel {
 			lblLucroLquido = new JLabel("LUCRO L\u00CDQUIDO:");
 			lblLucroLquido.setForeground(Color.WHITE);
 			lblLucroLquido.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			lblLucroLquido.setBounds(100, 315, 136, 13);
+			lblLucroLquido.setBounds(100, 315, 224, 13);
 		}
 		return lblLucroLquido;
 	}

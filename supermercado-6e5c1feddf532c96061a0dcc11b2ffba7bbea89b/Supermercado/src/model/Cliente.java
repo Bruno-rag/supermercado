@@ -2,11 +2,11 @@ package model;
 
 public class Cliente {
 
-	String nome;
-	String cpf;
-	String rg;
-	String dataNasc;
-	String limiteCredit;
+	private String nome;
+	private String cpf;
+	private String rg;
+	private String dataNasc;
+	private String limiteCredit;
 	
 	public Cliente(String nome, String cpf, String rg, String dataNasc, String limiteCredit) {
 		super();

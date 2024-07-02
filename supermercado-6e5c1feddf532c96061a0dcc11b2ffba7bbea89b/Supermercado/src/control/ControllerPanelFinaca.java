@@ -1,14 +1,13 @@
 package control;
 
 import java.awt.event.ActionEvent;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 
 import model.Cliente;
 import model.Produto;
+import model.ProdutoDAO;
 import model.Venda;
+import model.VendaDAO;
 import view.Frame;
 import view.PanelFinaca;
 import view.PanelHome;
@@ -47,27 +46,27 @@ public class ControllerPanelFinaca {
 		double valorTotalCompra = 0;
 		double lucroLiquido = 0;
 		double precoEstoque = 0;
-		ArrayList<Venda> listVendas =  ControllerDados.lerVendas();
-		ArrayList<Produto> listProdutos =  ControllerDados.lerProdutos();
+		ArrayList<Venda> listVendas =  VendaDAO.select();
+		ArrayList<Produto> listProdutos =  ProdutoDAO.select();
 		
-		//Pegando o total do preço de estoque
+		//Pegando o total do preï¿½o de estoque
 		for(Produto produto: listProdutos) {
 			double preco = Double.parseDouble(produto.getPrecoCompra());
 			double qantidade = Double.parseDouble(produto.getQuantidade());
-			System.out.println("Produtos: \n"+" Nome: "+produto.getNome()+" Preço venda: "+produto.getPrecoVenda()+"Preço de compra: "+produto.getPrecoCompra()+" QTD: " + produto.getQuantidade());
+			System.out.println("Produtos: \n"+" Nome: "+produto.getNome()+" PreÃ§o venda: "+produto.getPrecoVenda()+"Preï¿½o de compra: "+produto.getPrecoCompra()+" QTD: " + produto.getQuantidade());
 			precoEstoque = precoEstoque+(preco*qantidade);
 		}
 	   String stgPreco = precoEstoque+"";
 	    panelFinaca.getLblValorEstoque().setText("R$ "+stgPreco);
 		
-		// Verificar os produtos vendidos e pega seus preços
+		// Verificar os produtos vendidos e pega seus preï¿½os
 		for(Produto produto: listProdutos) {
 			for(Venda venda : listVendas) {
 				System.out.println(produto.getNome()+venda.getProdutos());
 				
 				if(produto.getNome().equals(venda.getProdutos()) ) {
-					valorTotalVenda = valorTotalVenda + Double.parseDouble(produto.getPrecoVenda());
-					valorTotalCompra = valorTotalCompra + Double.parseDouble(produto.getPrecoCompra());
+					valorTotalVenda = valorTotalVenda + ( Double.parseDouble(produto.getPrecoVenda()) * Double.parseDouble(venda.getQuatidade()) ); 
+					valorTotalCompra = valorTotalCompra + ( Double.parseDouble(produto.getPrecoCompra()) * Double.parseDouble(venda.getQuatidade()) );
 				}
 			}
 		}

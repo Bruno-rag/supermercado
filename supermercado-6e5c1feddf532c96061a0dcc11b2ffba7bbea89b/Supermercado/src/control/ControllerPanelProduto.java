@@ -1,26 +1,18 @@
 package control;
 
 import java.awt.event.ActionEvent;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.text.SimpleDateFormat;
-import java.text.ParseException;
-import java.util.Date;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
-import javax.swing.text.MaskFormatter;
 
+import model.Produto;
+import model.ProdutoDAO;
 import view.Frame;
 import view.PanelCadastroProduto;
 import view.PanelHome;
 import view.PanelListaProduto;
 import view.PanelProduto;
-import model.Produto;
 
 public class ControllerPanelProduto {
 	Frame frame;
@@ -65,21 +57,21 @@ public class ControllerPanelProduto {
 				return;
 			}
 			
-			//verifica o campo preço de venda
-			if(!ValidacaoTextField.verificaDouble(this.panelCadastroProduto.getFormattedTextFieldPrecoVenda().getText(),"Preço de venda")){
+			//verifica o campo preï¿½o de venda
+			if(!ValidacaoTextField.verificaDouble(this.panelCadastroProduto.getFormattedTextFieldPrecoVenda().getText(),"PreÃ§o de venda")){
 				return;
 			}
 			
-			//verifica o campo preço de compra
-			if(!ValidacaoTextField.verificaDouble(this.panelCadastroProduto.getFormattedTextFieldPrecoCompra().getText(),"Preço de Compra")){
+			//verifica o campo preï¿½o de compra
+			if(!ValidacaoTextField.verificaDouble(this.panelCadastroProduto.getFormattedTextFieldPrecoCompra().getText(),"PreÃ§o de Compra")){
 				return;
 			}
-			//verifica se o valor de compra é menor que o de venda
+			//verifica se o valor de compra ï¿½ menor que o de venda
 			if(!ValidacaoTextField.CompararNumeroMaior(this.panelCadastroProduto.getFormattedTextFieldPrecoVenda().getText(),this.panelCadastroProduto.getFormattedTextFieldPrecoCompra().getText())){
 				return;
 			}
 			
-			//verifica o campo Frabricação
+			//verifica o campo Frabricaï¿½ï¿½o
 			if(!ValidacaoTextField.verificaData(this.panelCadastroProduto.getFormattedTextFieldFabricacao().getText())){			
 				return;
 			}
@@ -89,15 +81,16 @@ public class ControllerPanelProduto {
 				return;
 			}
 			
+			
 			/*String dataEntradaFab = this.panelCadastroProduto.getFormattedTextFieldFabricacao().getText(); 
 			
 			try {
 			  dataParseada1 = sdf.parse(dataEntradaFab);  // Tente converter a string para uma data
 			  
 			  System.out.println(sdf.format(dataParseada1));
-			  //JOptionPane.showMessageDialog(null,"Data válida: " + dataParseada1);  // Data válida e parseada com sucesso
+			  //JOptionPane.showMessageDialog(null,"Data vï¿½lida: " + dataParseada1);  // Data vï¿½lida e parseada com sucesso
 			} catch (ParseException r) {
-				JOptionPane.showMessageDialog(null,"Formato de data inválido: " + r.getMessage()); // Formato de data inválido
+				JOptionPane.showMessageDialog(null,"Formato de data invï¿½lido: " + r.getMessage()); // Formato de data invï¿½lido
 			  return; 
 			}
 			*/
@@ -110,11 +103,11 @@ public class ControllerPanelProduto {
 			  int result = dataParseada1.compareTo(dataParseada2);
 			  System.out.println("data 1: :"+dataParseada1+"\n"+dataParseada2+"\n"+" result: " + result);
 			  if(result >= 0 ) {
-				  JOptionPane.showMessageDialog(null,"Data de Validade deve ser maior que a data de Fabricação.");
+				  JOptionPane.showMessageDialog(null,"Data de Validade deve ser maior que a data de Fabricaï¿½ï¿½o.");
 				  return; 
 			  }
 			} catch (ParseException r) {
-				JOptionPane.showMessageDialog(null,"Formato de data inválido: "); // Formato de data inválido
+				JOptionPane.showMessageDialog(null,"Formato de data invï¿½lido: "); // Formato de data invï¿½lido
 			  return; 
 			}*/
 			
@@ -133,7 +126,8 @@ public class ControllerPanelProduto {
 				this.panelCadastroProduto.getFormattedTextFieldPrecoQuantidade().getText()
 			);
 			
-			ControllerDados.salvarUmProduto(itemProduto);
+			//ControllerDados.salvarUmProduto(itemProduto);
+			ProdutoDAO.insert(itemProduto);
 				
 			panelCadastroProduto.getTextFieldNome().setText("");
 			panelCadastroProduto.getTextFieldTipo().setText("");
@@ -172,7 +166,7 @@ public class ControllerPanelProduto {
 				frame.setContentPane(panelProduto);
 			});
 			
-			panelListaProduto.getScrollPane().setViewportView(panelListaProduto.getPanelContainer(ControllerDados.lerProdutos()));
+			panelListaProduto.getScrollPane().setViewportView(panelListaProduto.getPanelContainer(ProdutoDAO.select()));
 			frame.setContentPane(panelListaProduto);
 		});
 	}

@@ -127,8 +127,8 @@ public class PanelCadastroVenda extends JPanel {
 			comboBoxFormaPagamento.removeAllItems();
 			//this.panelCadastroVenda.getComboBoxProdutos().setEnabled(false);
 			comboBoxFormaPagamento.addItem("Selecione");
-	        comboBoxFormaPagamento.addItem("Débito");
-	        comboBoxFormaPagamento.addItem("Crédito");
+	        comboBoxFormaPagamento.addItem("DÃ©bito");
+	        comboBoxFormaPagamento.addItem("CrÃ©dito");
 		}
 		return comboBoxFormaPagamento;
 	}

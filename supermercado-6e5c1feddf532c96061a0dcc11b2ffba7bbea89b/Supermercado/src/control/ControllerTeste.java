@@ -10,11 +10,11 @@ class ControllerTeste {
 	@Test
 	void testNome() {
 		
-		boolean dado = ValidacaoTextField.verificaNome("joão",""); 
+		boolean dado = ValidacaoTextField.verificaNome("joÃ£o",""); 
 		assertEquals(true, dado);
 		boolean dado2 = ValidacaoTextField.verificaNome("jo",""); 
 		assertEquals(false, dado2);
-		boolean dado3 = ValidacaoTextField.verificaNome("jooooooooooooooooooooooooooooooooooooooooooooooooooão", ""); 
+		boolean dado3 = ValidacaoTextField.verificaNome("jooooooooooooooooooooooooooooooooooooooooooooooooooï¿½o", ""); 
 		assertEquals(false, dado3);
 	}
 	

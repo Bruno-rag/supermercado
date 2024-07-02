@@ -66,7 +66,7 @@ public class PanelHome extends JPanel {
 	public JLabel getLabelTitulo() {
 		if (labelTitulo == null) {
 			labelTitulo = new JLabel("Menu");
-			labelTitulo.setBounds(53, 50, 55, 25);
+			labelTitulo.setBounds(53, 50, 100, 25);
 			labelTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
 		}
 		return labelTitulo;
@@ -105,7 +105,7 @@ public class PanelHome extends JPanel {
 	}
 	public JButton getBtnFinacas() {
 		if (btnFinacas == null) {
-			btnFinacas = new JButton("Balanço Completo");
+			btnFinacas = new JButton("BalanÃ§o Completo");
 			btnFinacas.setBounds(53, 489, 250, 35);
 			btnFinacas.setFont(new Font("Tahoma", Font.PLAIN, 22));
 			btnFinacas.setBackground(new Color(255, 255, 255));
@@ -125,7 +125,7 @@ public class PanelHome extends JPanel {
 		if(labelTela == null) {
 			labelTela = new JLabel();
 			labelTela.setIcon(imgIcon);
-			labelTela.setBounds(-10, -20, 1024, 768);
+			labelTela.setBounds(10, 0, 1024, 768);
 			
 		}
 		return labelTela;
